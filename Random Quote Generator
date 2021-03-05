@@ -1,1 +1,17 @@
-let quotes = 
+let quotes = [
+  {
+    quote: '',
+    source: '',
+  },
+  {},
+  {},
+  {},
+  {},
+  {},
+  {}
+  
+];
+
+//generate random number to get an index location and display that quote on the page
+
+let randNum = Math.floor(Math.random() * quotes.length) + 1
