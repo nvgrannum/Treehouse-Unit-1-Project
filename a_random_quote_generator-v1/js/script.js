@@ -57,8 +57,7 @@ let quotes = [
 function getRandomQuote() {
   let randNum = Math.floor(Math.random() * ( quotes.length ));
   let randQuote = quotes[randNum];
-//   console.log(randNum);
-//   console.log(randQuote);
+  return randQuote;
 }
 
 /***
@@ -68,29 +67,29 @@ function getRandomQuote() {
 function printQuote() { 
   let quotation = getRandomQuote(quotes);
   let html = `
-  <p class="quote">${quotation[quote]}</p>
-  <p class="source">${quotation[source]}
+  <p class="quote">${quotation["quote"]}</p>
+  <p class="source">${quotation["source"]}
   `;
   if (quotation.citation) {
-    html += `,<span class="citation"> ${quotation[citation]}</span>`
+    html += `,<span class="citation"> ${quotation["citation"]}</span>`
   }
   if (quotation.year) {
-    html += `, <span class="year">${quotation[year]}</span>`;
+    html += `,<span class="year"> ${quotation["year"]}</span>`;
   }
-  if (quotation.tag) {
+  if (quotation.category) {
     html += `
-   <span class="year">${quotation[tags]}</span>`;
+
+   <span class="year">${quotation["category"]}</span>`;
   }
   html += `</p>`;
-  document.getElementById('quote-box').innerHTML = html; 
+ 
+  document.getElementById('quote-box').innerHTML = html;  
 
 }
-
+printQuote();
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
-
-
+ document.getElementById('load-quote').addEventListener("click", printQuote, false);
