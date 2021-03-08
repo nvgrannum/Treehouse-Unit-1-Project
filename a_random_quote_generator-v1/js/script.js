@@ -17,7 +17,7 @@ let quotes = [
     source: 'me',
     citation: 'my head',
     year: 1993,
-    tags: 'personal'
+    category: 'personal'
   },
   {
     quote: 'who',
@@ -39,7 +39,7 @@ let quotes = [
   {
     quote: 'Once upon a time',
     source: 'every childrens book ever',
-    tags: "Children's lit"
+    category: "Children's lit"
   },
   {
     quote: 'I will get a good grade in therapy. This is something both reasonable to want and possible to achieve',
