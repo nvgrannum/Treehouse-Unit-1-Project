@@ -50,19 +50,26 @@ let quotes = [
  * `getRandomQuote` function
 ***/
 
+
 function getRandomQuote() {
-  
+  let randNum = Math.floor(Math.random() * ( quotes.length ));
+  let randQuote = quotes[randNum];
+  // console.log(randNum);
+  // console.log(randQuote);
 }
 
 /***
  * `printQuote` function
 ***/
 
-function printQuote() { `
-  <p class="quote"></p>
-  <p class="source"></p>
-
-`
+function printQuote() { 
+  let quotation = getRandomQuote(quotes);
+  let html = `
+  <p class="quote">${quotation[quote]}</p>
+  <p class="source">${quotation[quote]}</p>
+  `;
+console.log(html);
+document.querySelector('main').innerHTML = html;
 }
 
 /***
