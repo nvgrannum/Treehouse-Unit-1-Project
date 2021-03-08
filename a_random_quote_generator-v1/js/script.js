@@ -72,14 +72,14 @@ function printQuote() {
   <p class="source">${quotation[source]}
   `;
   if (quotation.citation) {
-    html += `,</p><span class="citation"> ${quotation[citation]}</span>`
+    html += `,<span class="citation"> ${quotation[citation]}</span>`
   }
   if (quotation.year) {
-    html += `<span class="year">${quotation[year]}</span>`;
+    html += `, <span class="year">${quotation[year]}</span>`;
   }
   if (quotation.tag) {
     html += `
-  <span class="year">${quotation[tags]}</span>`;
+   <span class="year">${quotation[tags]}</span>`;
   }
   html += `</p>`;
   document.getElementById('quote-box').innerHTML = html; 
