@@ -16,7 +16,8 @@ let quotes = [
     quote: 'What',
     source: 'me',
     citation: 'my head',
-    year: 1993
+    year: 1993,
+    tags: 'personal'
   },
   {
     quote: 'who',
@@ -28,7 +29,8 @@ let quotes = [
   },
   {
     quote: 'Dont judge me',
-    source: 'You'
+    source: 'You',
+    year: 2021
   },
   {
     quote: 'But I am already judging',
@@ -36,7 +38,8 @@ let quotes = [
   },
   {
     quote: 'Once upon a time',
-    source: 'every childrens book ever'
+    source: 'every childrens book ever',
+    tags: "Children's lit"
   },
   {
     quote: 'I will get a good grade in therapy. This is something both reasonable to want and possible to achieve',
@@ -54,8 +57,8 @@ let quotes = [
 function getRandomQuote() {
   let randNum = Math.floor(Math.random() * ( quotes.length ));
   let randQuote = quotes[randNum];
-  // console.log(randNum);
-  // console.log(randQuote);
+//   console.log(randNum);
+//   console.log(randQuote);
 }
 
 /***
@@ -66,10 +69,21 @@ function printQuote() {
   let quotation = getRandomQuote(quotes);
   let html = `
   <p class="quote">${quotation[quote]}</p>
-  <p class="source">${quotation[quote]}</p>
+  <p class="source">${quotation[source]}
   `;
-console.log(html);
-document.querySelector('main').innerHTML = html;
+  if (quotation.citation) {
+    html += `,</p><span class="citation"> ${quotation[citation]}</span>`
+  }
+  if (quotation.year) {
+    html += `<span class="year">${quotation[year]}</span>`;
+  }
+  if (quotation.tag) {
+    html += `
+  <span class="year">${quotation[tags]}</span>`;
+  }
+  html += `</p>`;
+  document.getElementById('quote-box').innerHTML = html; 
+
 }
 
 /***
@@ -78,3 +92,5 @@ document.querySelector('main').innerHTML = html;
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+
