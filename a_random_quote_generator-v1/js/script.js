@@ -103,7 +103,7 @@ function printQuote() {
   document.body.style.backgroundColor = random_rgb();  
 
 }
-setInterval(printQuote,10000);
+setInterval(printQuote,20000);
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
