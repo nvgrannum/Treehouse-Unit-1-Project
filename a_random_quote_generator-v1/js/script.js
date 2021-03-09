@@ -89,13 +89,13 @@ function printQuote() {
   <p class="source">${quotation["source"]}
   `;
     if (quotation.citation) {
-      html += `,<span class="citation">  ${quotation["citation"]}</span>`
+      html += `<span class="citation">  ${quotation["citation"]}</span>`
     }
     if (quotation.year) {
-      html += `,<span class="year">  ${quotation["year"]}</span>`;
+      html += `<span class="year">  ${quotation["year"]}</span>`;
     }
     if (quotation.category) {
-      html += ` <br><span class="year">${quotation["category"]}</span>`;
+      html += `<span class="year">${quotation["category"]}</span>`;
     }
   html += `</p>`;
  
