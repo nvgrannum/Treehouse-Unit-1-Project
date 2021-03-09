@@ -39,7 +39,7 @@ let quotes = [
     category: "#TV Show"
   },
   {
-    quote: "It always seems impossible until it's done",
+    quote: "It always seems impossible until it's done.",
     source: 'Nelson Mandela'
   },
   {
